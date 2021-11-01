@@ -7,7 +7,7 @@ $.ajax({
 
 $.ajax({
     method: "GET",
-    url: "https://www.kingdomhearts.com/img/header/kh_trailer_still_img.jpg",
+    url: "./images/kh3.jpg",
 }).done(function (response) {
     $("#ajax-image").attr(src, response);
 });
