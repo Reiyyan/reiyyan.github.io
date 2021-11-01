@@ -9,5 +9,5 @@ $.ajax({
     method: "GET",
     url: "./images/kh3.jpg",
 }).done(function (response) {
-    $("#ajax-image").attr(src, response);
+    $("#ajax-image").attr('src', response);
 });
