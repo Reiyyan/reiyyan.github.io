@@ -5,22 +5,16 @@ $.ajax({
 }).done(function (response) {
     console.log(response);
     $("#ajax-description").text(response.description);
-    $("#ajax-image").attr({
-        src: response.url,
-    });
-    console.log($("#ajax-image"));
+    $("#ajax-image").attr({ src: response.url });
 });
 
-setTimeout(function(){
+setTimeout(function () {
     $.ajax({
         method: "GET",
         url: "game_2.json",
     }).done(function (response) {
         console.log(response);
         $("#ajax-description").text(response.description);
-        $("#ajax-image").attr({
-            src: response.url,
-        });
-        console.log($("#ajax-image"));
+        $("#ajax-image").attr({ src: response.url });
     });
-},5000); 
+}, 5000);
