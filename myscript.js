@@ -4,6 +4,8 @@ $.ajax({
 }).done(function (response) {
     console.log(response);
     $("#ajax-description").text(response.description);
-    $("#ajax-image").src = response.url
+    $("#ajax-image").attr({
+        src: response.url,
+    });
     console.log($("#ajax-image"));
 });
