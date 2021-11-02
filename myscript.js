@@ -17,7 +17,7 @@ setTimeout(function () {
         $("#ajax-description").text(response.description);
         $("#ajax-image").attr({ src: response.url });
     });
-}, 1000);
+}, 20000);
 
 setTimeout(function () {
     $.ajax({
@@ -28,7 +28,7 @@ setTimeout(function () {
         $("#ajax-description").text(response.description);
         $("#ajax-image").attr({ src: response.url });
     });
-}, 2000);
+}, 40000);
 
 setTimeout(function () {
     $.ajax({
@@ -39,4 +39,4 @@ setTimeout(function () {
         $("#ajax-description").text(response.description);
         $("#ajax-image").attr({ src: response.url });
     });
-}, 3000);
+}, 60000);
