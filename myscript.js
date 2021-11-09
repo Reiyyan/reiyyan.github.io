@@ -1,42 +1,15 @@
-// Start at 0
 $.ajax({
     method: "GET",
-    url: "game_1.json",
+    url: "data.json",
 }).done(function (response) {
     console.log(response);
-    $("#ajax-description").text(response.description);
-    $("#ajax-image").attr({ src: response.url });
+    $("#ajax-image").attr({ src: response.imageURL });
+    $("#ajax-name").text(response.name);
+    $("#ajax-year").text(response.year);
+    $("#ajax-engine-type").text(response.engine.type);
+    $("#ajax-engine-size").text(response.engine.size);
+    $("#ajax-engine-configuration").text(response.engine.configuration);
+    $("#ajax-brake-front").text(response.brakes.front);
+    $("#ajax-brake-back").text(response.brakes.back);
 });
 
-setTimeout(function () {
-    $.ajax({
-        method: "GET",
-        url: "game_2.json",
-    }).done(function (response) {
-        console.log(response);
-        $("#ajax-description").text(response.description);
-        $("#ajax-image").attr({ src: response.url });
-    });
-}, 20000);
-
-setTimeout(function () {
-    $.ajax({
-        method: "GET",
-        url: "game_3.json",
-    }).done(function (response) {
-        console.log(response);
-        $("#ajax-description").text(response.description);
-        $("#ajax-image").attr({ src: response.url });
-    });
-}, 40000);
-
-setTimeout(function () {
-    $.ajax({
-        method: "GET",
-        url: "game_4.json",
-    }).done(function (response) {
-        console.log(response);
-        $("#ajax-description").text(response.description);
-        $("#ajax-image").attr({ src: response.url });
-    });
-}, 60000);
